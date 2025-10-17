@@ -1,0 +1,86 @@
+@use "/src/sass/pxtorem.scss" as r;
+
+.promo {
+  position: relative;
+  padding-top: r.rem(50);
+  &__wrapper {
+    margin-top: r.rem(50);
+  }
+  &__title {
+    padding: 0 r.rem(5);
+  }
+  &__img {
+    margin: 0 auto;
+    width: r.rem(270);
+    height: r.rem(377);
+    box-shadow: r.rem(5) r.rem(5) r.rem(10) 0 rgba(0, 0, 0, 0.25);
+  }
+  &__btn {
+    margin: r.rem(18) auto 0 auto;
+  }
+  &__potter {
+    display: none;
+  }
+}
+
+@media screen and (min-width: r.rem(768)) {
+  .promo {
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__cta {
+      margin-top: 0;
+    }
+    &__img {
+      width: r.rem(230);
+      height: r.rem(321);
+    }
+    &__title {
+      text-align-last: left;
+      padding: 0;
+      padding-top: r.rem(250);
+      padding-left: r.rem(71);
+    }
+  }
+}
+
+@media screen and (min-width: r.rem(1200)) {
+  .promo {
+    &__potter {
+      display: block;
+      position: absolute;
+      width: clamp(r.rem(450), 37.5vw, r.rem(640));
+      height: r.rem(633);
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+    &__title {
+      padding-left: r.rem(571);
+    }
+  }
+}
+
+@media screen and (min-width: r.rem(1920)) {
+  .promo {
+    padding-top: r.rem(40);
+    &__wrapper {
+      margin-top: r.rem(79);
+    }
+    &__potter {
+      height: r.rem(900);
+    }
+    &__img {
+      width: r.rem(330);
+      height: r.rem(460);
+    }
+    &__btn {
+      margin: r.rem(50) auto 0 auto;
+    }
+    &__title {
+      padding-top: r.rem(384);
+      padding-left: r.rem(642);
+    }
+  }
+}

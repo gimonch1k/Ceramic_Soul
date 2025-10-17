@@ -1,0 +1,72 @@
+@use "/src/sass/base/variables.scss" as v;
+@use "/src/sass/pxtorem.scss" as r;
+
+.activities {
+  padding-top: r.rem(60);
+  &__wrapper {
+    margin-top: r.rem(20);
+    row-gap: r.rem(40);
+  }
+  &__img {
+    width: 100%;
+    margin-top: r.rem(40);
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+  }
+  &__text {
+    font-weight: 400;
+    font-size: r.rem(16);
+    color: v.$dark;
+    margin-block-start: r.rem(20);
+    span {
+      font-weight: 500;
+      color: v.$ceramic;
+    }
+  }
+}
+
+@media screen and (min-width: r.rem(768)) {
+  .activities {
+    padding: r.rem(60) r.rem(95) 0 r.rem(95);
+    &__wrapper {
+      margin-top: r.rem(40);
+    }
+    &__text {
+      margin-block-start: r.rem(25);
+      font-size: r.rem(20);
+    }
+  }
+}
+
+@media screen and (min-width: r.rem(1024)) {
+  .activities {
+    &__col {
+      padding: 0 10px;
+    }
+  }
+}
+
+@media screen and (min-width: r.rem(1200)) {
+  .activities {
+    padding: r.rem(60) 0 0 0;
+    &__wrapper {
+      margin-top: r.rem(80);
+    }
+    &__col {
+      padding: 0 10px;
+    }
+    &__img {
+      margin-top: r.rem(60);
+    }
+    &__text {
+      &_fixed {
+        inline-size: r.rem(556);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: r.rem(1920)) {
+  .activities {
+    padding-top: r.rem(100);
+  }
+}

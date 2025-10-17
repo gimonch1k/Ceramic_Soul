@@ -1,0 +1,41 @@
+@use "/src/sass/base/mixins.scss" as *;
+@use "/src/sass/pxtorem.scss" as r;
+
+.title-h1-italic {
+  @include title;
+  font-style: italic;
+  font-size: r.rem(24);
+}
+
+.title-h2 {
+  @include title;
+  font-weight: 500;
+  font-size: r.rem(32);
+}
+
+.title-h3 {
+  @include title;
+  font-weight: 500;
+  font-size: r.rem(20);
+}
+
+@media screen and (min-width: r.rem(768)) {
+  .title-h2 {
+    font-size: r.rem(36);
+  }
+  .title-h3 {
+    font-size: r.rem(24);
+  }
+}
+
+@media screen and (min-width: r.rem(1200)) {
+  .title-h2 {
+    font-size: r.rem(40);
+  }
+}
+
+@media screen and (min-width: r.rem(1920)) {
+  .title-h1-italic {
+    font-size: r.rem(32);
+  }
+}

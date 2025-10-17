@@ -1,0 +1,15 @@
+@use "/src/sass/libs/modern-normalize.min.css";
+@use "/src/sass/libs/fontello.css";
+
+@use "/src/sass/base/variables.scss" as v;
+@use "/src/sass/pxtorem.scss" as r;
+@use "/src/sass/base/basic.scss";
+
+@use "/src/sass/blocks/header.scss";
+
+@use "/src/sass/ui/titels.scss";
+@use "/src/sass/ui/buttons.scss";
+
+@use "/src/sass/blocks/promo.scss";
+@use "/src/sass/blocks/activities.scss";
+@use "/src/sass/blocks/touch.scss";
