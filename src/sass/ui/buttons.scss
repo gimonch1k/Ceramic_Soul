@@ -18,6 +18,10 @@
     outline: r.rem(1) solid v.$ceramic;
     border: r.rem(1) solid v.$ceramic;
   }
+  &:disabled {
+    color: v.$ui-disabled;
+    border: r.rem(1) solid v.$ui-disabled;
+  }
 }
 
 @media screen and (min-width: r.rem(1200)) {
@@ -31,6 +35,16 @@
       background: rgba(217, 217, 217, 0.1);
       color: v.$dark;
       border: none;
+    }
+  }
+  .btn-send {
+    &:active {
+      outline: r.rem(1) solid v.$ceramic;
+      border: r.rem(1) solid v.$ceramic;
+    }
+    &:hover {
+      color: v.$ceramic;
+      border: r.rem(1) solid v.$ceramic;
     }
   }
 }

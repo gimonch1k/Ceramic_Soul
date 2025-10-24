@@ -45,6 +45,7 @@ body {
 .container {
   width: 100%;
   padding: 0 r.rem(10);
+  position: relative;
 }
 
 @media screen and (min-width: r.rem(768)) {

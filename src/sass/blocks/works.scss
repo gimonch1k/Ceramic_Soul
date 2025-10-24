@@ -1,0 +1,103 @@
+@use "/src/sass/base/mixins.scss" as *;
+@use "/src/sass/pxtorem.scss" as r;
+@use "/src/sass/base/variables.scss" as v;
+
+.works {
+  padding-top: r.rem(60);
+  padding-bottom: r.rem(100);
+  &__slider {
+    margin-top: r.rem(40);
+  }
+  .swiper-slide img {
+    width: 100%;
+  }
+  .works__slider-nav {
+    display: none;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+  .swiper-pagination {
+    bottom: r.rem(-35);
+  }
+  .swiper-pagination-bullet {
+    width: r.rem(10);
+    height: r.rem(10);
+    background-color: v.$dark;
+    border-radius: 0%;
+    opacity: 1;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-horizontal.swiper-pagination-bullets {
+    .swiper-pagination-bullet {
+      margin: 0 r.rem(6);
+    }
+  }
+  .swiper-pagination-bullet-active {
+    background: v.$ceramic;
+  }
+}
+
+@media screen and (min-width: r.rem(768)) {
+  .works {
+    &__slider {
+      margin-top: r.rem(45);
+    }
+    .swiper-slide img {
+      display: block;
+      width: r.rem(400);
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (min-width: r.rem(1200)) {
+  .works {
+    &__wrapper {
+      position: relative;
+    }
+    &__slider {
+      margin: r.rem(80) r.rem(40) 0 r.rem(40);
+    }
+    .works__slider-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      display: block;
+      font-size: r.rem(21);
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      &::before {
+        width: auto;
+        margin: 0;
+      }
+    }
+    .swiper-pagination {
+      bottom: r.rem(-30);
+    }
+    .icon-left-open {
+      left: r.rem(13);
+    }
+    .icon-right-open {
+      right: r.rem(13);
+    }
+  }
+}
+
+@media screen and (min-width: r.rem(1920)) {
+  .works {
+    padding-top: r.rem(100);
+    &__slider {
+      margin: r.rem(80) r.rem(85) 0 r.rem(85);
+    }
+    .icon-left-open {
+      left: r.rem(40);
+    }
+    .icon-right-open {
+      right: r.rem(40);
+    }
+  }
+}

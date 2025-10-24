@@ -2,6 +2,7 @@
 @use "/src/sass/pxtorem.scss" as r;
 
 .touch {
+  position: relative;
   padding-top: r.rem(60);
   &__wrapper {
     margin-top: r.rem(60);
@@ -25,7 +26,7 @@
     }
   }
   &__input {
-    width: 100%;
+    width: r.rem(340);
     border: r.rem(1) solid #e2e1e5;
     border-radius: r.rem(2);
     padding: r.rem(10) r.rem(15);
@@ -42,7 +43,7 @@
     }
   }
   &__textarea {
-    width: 100%;
+    width: r.rem(340);
     border: r.rem(1) solid #e2e1e5;
     border-radius: r.rem(2);
     padding: r.rem(10) r.rem(15);
@@ -74,6 +75,28 @@
     width: r.rem(15);
     height: r.rem(15);
   }
+  &__btn {
+    margin-top: r.rem(20);
+  }
+  &__decor {
+    display: none;
+  }
+}
+
+@media screen and (min-width: r.rem(768)) {
+  .touch {
+    &__form {
+      position: relative;
+      padding-left: r.rem(24);
+      width: r.rem(300);
+    }
+    &__decor {
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
 }
 
 @media screen and (min-width: r.rem(1200)) {
@@ -91,6 +114,9 @@
         outline: r.rem(1) solid v.$dark;
       }
     }
+    &__form {
+      padding-left: r.rem(20);
+    }
   }
 }
 
@@ -98,6 +124,23 @@
   .touch {
     &__img {
       height: r.rem(356);
+    }
+    &__form {
+      width: auto;
+      padding-left: r.rem(143);
+    }
+    &__fieldset {
+      display: flex;
+      column-gap: r.rem(45);
+    }
+    &__label,
+    &__check-block,
+    &__input,
+    &__textarea {
+      width: 300px;
+    }
+    &__decor {
+      right: 75px;
     }
   }
 }
