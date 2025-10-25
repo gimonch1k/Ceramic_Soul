@@ -24,6 +24,19 @@
   }
 }
 
+.btn-submit {
+  @include button;
+  border: 1px solid v.$light;
+  width: r.rem(90);
+  height: r.rem(40);
+  color: v.$light;
+  font-size: r.rem(16);
+  &:disabled {
+    color: v.$ui-disabled;
+    border: 1px solid v.$ui-disabled;
+  }
+}
+
 @media screen and (min-width: r.rem(1200)) {
   .btn-default {
     &:hover {

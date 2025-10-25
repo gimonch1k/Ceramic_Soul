@@ -1,0 +1,133 @@
+@use "/src/sass/pxtorem.scss" as r;
+@use "/src/sass/base/variables.scss" as v;
+
+.footer {
+  padding: r.rem(50) 0;
+  background-color: v.$dark;
+  &__title {
+    font-weight: 500;
+    font-size: r.rem(16);
+    text-transform: uppercase;
+    color: v.$light;
+  }
+  &__text {
+    margin-top: r.rem(40);
+    font-weight: 400;
+    font-size: r.rem(16);
+    color: v.$light;
+  }
+  &__form {
+    margin-top: r.rem(40);
+  }
+  &__input {
+    display: block;
+    width: r.rem(293);
+    padding-bottom: r.rem(15);
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid v.$ui-active;
+    font-size: r.rem(14);
+    font-weight: 400;
+    color: v.$ui-active;
+    &::placeholder {
+      color: v.$ui-active;
+    }
+  }
+  &__check-block {
+    display: flex;
+    align-items: center;
+    margin-top: r.rem(20);
+    color: v.$light;
+    font-weight: 400;
+    font-size: r.rem(14);
+    line-height: 200%;
+    a {
+      text-decoration: none;
+      margin-left: r.rem(4);
+      color: #a22dc6;
+    }
+  }
+  &__checkbox {
+    margin-right: r.rem(15);
+  }
+  &__btn {
+    margin-top: r.rem(20);
+  }
+  &__links {
+    margin-top: r.rem(40);
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: r.rem(66);
+    row-gap: r.rem(40);
+  }
+  &__nav {
+    margin-top: r.rem(40);
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    row-gap: r.rem(20);
+    a {
+      text-decoration: none;
+      color: v.$light;
+    }
+  }
+  &__social {
+    margin-top: r.rem(40);
+  }
+  &__social-block {
+    display: flex;
+    column-gap: r.rem(10);
+    margin-top: r.rem(40);
+    list-style-type: none;
+    padding: 0;
+    a {
+      display: block;
+      color: v.$light;
+      font-size: r.rem(24);
+      span:before {
+        margin: 0;
+      }
+    }
+  }
+  &__copyright {
+    margin-top: r.rem(40);
+    font-weight: 400;
+    font-size: r.rem(14);
+    color: v.$light;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: r.rem(768)) {
+  .footer {
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &__newsletter {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: r.rem(1200)) {
+  .footer {
+    &__newsletter {
+      width: auto;
+    }
+    &__links,
+    &__social {
+      margin-top: 0;
+    }
+  }
+}
+
+@media screen and (min-width: r.rem(1920)) {
+  .footer {
+    padding-top: r.rem(80);
+    &__copyright {
+      margin-top: r.rem(18);
+    }
+  }
+}
