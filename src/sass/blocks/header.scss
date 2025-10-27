@@ -27,6 +27,58 @@
   &__nav {
     display: none;
   }
+  &__menu {
+    z-index: 100;
+    padding: r.rem(50) r.rem(10);
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    background-color: v.$light;
+    transition: transform 1s;
+    opacity: 0.9;
+    &_active {
+      transform: translateX(100%);
+      opacity: 1;
+    }
+    &-close {
+      position: relative;
+      width: r.rem(20);
+      height: r.rem(20);
+      span {
+        position: absolute;
+        display: block;
+        width: r.rem(20);
+        height: r.rem(1);
+        background-color: v.$dark;
+        &:nth-child(1) {
+          transform: translateY(r.rem(8)) rotate(45deg);
+        }
+        &:nth-child(2) {
+          transform: translateY(r.rem(8)) rotate(-45deg);
+        }
+      }
+    }
+    &-nav {
+      margin-top: r.rem(50);
+      padding-left: r.rem(14);
+      ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: r.rem(25);
+        padding: 0;
+        list-style-type: none;
+      }
+    }
+    &-link {
+      font-weight: 400;
+      font-size: r.rem(20);
+      text-transform: uppercase;
+      color: v.$dark;
+      text-decoration: none;
+    }
+  }
 }
 
 .burger {
@@ -65,7 +117,11 @@
       color: v.$dark;
       text-decoration: none;
     }
+    &__menu {
+      display: none;
+    }
   }
+
   .burger {
     visibility: hidden;
   }

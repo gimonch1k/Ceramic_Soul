@@ -10,7 +10,7 @@
     padding: 0 r.rem(5);
   }
   &__img {
-    margin: 0 auto;
+    margin: r.rem(40) auto 0 auto;
     width: r.rem(270);
     height: r.rem(377);
     box-shadow: r.rem(5) r.rem(5) r.rem(10) 0 rgba(0, 0, 0, 0.25);

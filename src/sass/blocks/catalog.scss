@@ -1,0 +1,74 @@
+@use "/src/sass/base/variables.scss" as v;
+@use "/src/sass/pxtorem.scss" as r;
+
+.catalog {
+  padding-top: r.rem(50);
+  padding-bottom: r.rem(60);
+  &__title {
+    margin-top: r.rem(60);
+  }
+  &__tabs {
+    display: flex;
+    column-gap: r.rem(50);
+    row-gap: r.rem(13);
+    flex-wrap: wrap;
+    margin-top: r.rem(60);
+    border: 1px solid v.$dark;
+    padding: r.rem(13) r.rem(25);
+  }
+  &__tab {
+    position: relative;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: r.rem(20);
+    text-transform: uppercase;
+    color: #000;
+    &_active::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: r.rem(1);
+      background-color: #000;
+      bottom: r.rem(-1);
+    }
+  }
+  &__content-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: r.rem(20);
+    margin-top: r.rem(60);
+  }
+  &__card {
+    margin: 0 auto;
+    padding-bottom: r.rem(16.5);
+    border: r.rem(1) solid v.$dark;
+    box-shadow: r.rem(5) r.rem(5) r.rem(10) 0 rgba(0, 0, 0, 0.25);
+    background: v.$light;
+  }
+  &__img {
+    width: r.rem(340);
+  }
+  &__descr {
+    display: block;
+    margin-left: r.rem(12);
+    margin-top: r.rem(11);
+    font-weight: 500;
+    font-size: r.rem(16);
+    color: #000;
+  }
+  &__price {
+    display: block;
+    margin-left: r.rem(12);
+    margin-top: r.rem(7.7);
+    font-weight: 500;
+    font-size: r.rem(16);
+    color: #000;
+  }
+}
+
+@media screen and (min-width: r.rem(768)) {
+  .catalog {
+  }
+}
