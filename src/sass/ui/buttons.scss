@@ -37,6 +37,17 @@
   }
 }
 
+.btn-read {
+  @include button;
+  width: r.rem(145);
+  height: r.rem(32);
+  font-size: r.rem(14);
+  &:focus {
+    outline: r.rem(1) solid v.$ceramic;
+    border: r.rem(1) solid v.$ceramic;
+  }
+}
+
 @media screen and (min-width: r.rem(1200)) {
   .btn-default {
     &:hover {
@@ -51,6 +62,16 @@
     }
   }
   .btn-send {
+    &:active {
+      outline: r.rem(1) solid v.$ceramic;
+      border: r.rem(1) solid v.$ceramic;
+    }
+    &:hover {
+      color: v.$ceramic;
+      border: r.rem(1) solid v.$ceramic;
+    }
+  }
+  .btn-read {
     &:active {
       outline: r.rem(1) solid v.$ceramic;
       border: r.rem(1) solid v.$ceramic;

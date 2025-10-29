@@ -1,0 +1,114 @@
+@use "/src/sass/base/variables.scss" as v;
+@use "/src/sass/pxtorem.scss" as r;
+@use "/src/sass/base/mixins.scss" as *;
+
+.blog {
+  padding-top: r.rem(50);
+  padding-bottom: r.rem(60);
+  &__wrapper {
+    margin-top: r.rem(60);
+    display: flex;
+    flex-direction: column;
+    row-gap: r.rem(40);
+  }
+  &__title {
+    margin-top: r.rem(60);
+  }
+  &__title-h2 {
+    font-weight: 500;
+    font-size: r.rem(24);
+    text-transform: uppercase;
+    color: v.$dark;
+  }
+  &__title-h2-margin {
+    margin-top: r.rem(20);
+  }
+  &__text {
+    padding: r.rem(25);
+    font-weight: 400;
+    font-size: r.rem(16);
+    color: v.$dark;
+    border: r.rem(1) solid v.$dark;
+    border-top: none;
+  }
+  &__descr {
+    border-left: r.rem(1) solid v.$dark;
+    border-right: r.rem(1) solid v.$dark;
+    padding: r.rem(25) r.rem(25) 0 r.rem(25);
+    display: flex;
+    flex-direction: column;
+    row-gap: r.rem(25);
+  }
+  &__card {
+    box-shadow: r.rem(5) r.rem(5) r.rem(10) 0 rgba(0, 0, 0, 0.25);
+    background: v.$light;
+  }
+  &__img-img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: r.rem(768)) {
+  .blog {
+    &__wrapper {
+      position: relative;
+      padding: r.rem(25) r.rem(25) 0 r.rem(25);
+      @include decoration;
+    }
+    &__data {
+      display: flex;
+    }
+    &__text {
+      padding: r.rem(15) r.rem(25) r.rem(25) r.rem(25);
+    }
+    &__img {
+      width: 50%;
+    }
+    &__descr {
+      width: 50%;
+      border-left: none;
+      border-top: r.rem(1) solid v.$dark;
+      justify-content: space-between;
+    }
+    &__img-img {
+      height: r.rem(240);
+      object-fit: cover;
+    }
+  }
+}
+
+@media screen and (min-width: r.rem(1200)) {
+  .blog {
+    &__wrapper {
+      flex-direction: row;
+      align-items: start;
+      column-gap: r.rem(50);
+    }
+    &__card {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: r.rem(1920)) {
+  .blog {
+    padding-top: r.rem(40);
+    padding-bottom: r.rem(100);
+    &__title {
+      margin-top: r.rem(100);
+    }
+    &__card {
+      height: r.rem(375);
+      border: r.rem(1) solid v.$dark;
+    }
+    &__text {
+      border: none;
+    }
+    &__descr {
+      border: none;
+    }
+    &__img-img {
+      transform: translateY(-1px);
+    }
+  }
+}

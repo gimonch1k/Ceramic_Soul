@@ -1,5 +1,6 @@
 @use "/src/sass/base/variables.scss" as v;
 @use "/src/sass/pxtorem.scss" as r;
+@use "/src/sass/base/mixins.scss" as *;
 
 .catalog {
   padding-top: r.rem(50);
@@ -41,6 +42,8 @@
     margin-top: r.rem(60);
   }
   &__card {
+    width: r.rem(340);
+    min-height: r.rem(275);
     margin: 0 auto;
     padding-bottom: r.rem(16.5);
     border: r.rem(1) solid v.$dark;
@@ -48,7 +51,9 @@
     background: v.$light;
   }
   &__img {
-    width: r.rem(340);
+    width: 100%;
+    height: r.rem(198);
+    object-fit: cover;
   }
   &__descr {
     display: block;
@@ -70,5 +75,57 @@
 
 @media screen and (min-width: r.rem(768)) {
   .catalog {
+    &__tabs {
+      width: r.rem(460);
+    }
+    &__content-item {
+      padding: r.rem(10) 0 0 r.rem(10);
+      position: relative;
+      flex-direction: row;
+      flex-wrap: wrap;
+      row-gap: r.rem(20);
+      column-gap: r.rem(20);
+      align-items: flex-start;
+      @include decoration;
+    }
+    &__card {
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (min-width: r.rem(1200)) {
+  .catalog {
+    &__content-item {
+      padding: r.rem(25) 0 0 r.rem(25);
+      gap: r.rem(35);
+    }
+  }
+}
+@media screen and (min-width: r.rem(1920)) {
+  .catalog {
+    padding-top: r.rem(40);
+    padding-bottom: r.rem(100);
+    &__title {
+      margin-top: r.rem(100);
+    }
+    &__content-item {
+      column-gap: r.rem(83);
+      row-gap: r.rem(25);
+    }
+    &__card {
+      width: r.rem(285);
+      min-height: r.rem(250);
+      padding-bottom: r.rem(15);
+    }
+    &__descr {
+      margin-top: r.rem(10);
+    }
+    &__price {
+      margin-top: r.rem(7);
+    }
+    &__img {
+      height: r.rem(180);
+    }
   }
 }

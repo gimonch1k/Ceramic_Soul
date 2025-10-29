@@ -21,7 +21,8 @@
 }
 
 @media screen and (min-width: r.rem(768)) {
-  .title-h2 {
+  .title-h2,
+  .title-h1 {
     font-size: r.rem(36);
   }
   .title-h3 {
@@ -30,7 +31,8 @@
 }
 
 @media screen and (min-width: r.rem(1200)) {
-  .title-h2 {
+  .title-h2,
+  .title-h1 {
     font-size: r.rem(40);
   }
 }
