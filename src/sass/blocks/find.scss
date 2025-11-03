@@ -1,0 +1,53 @@
+@use "/src/sass/base/variables.scss" as v;
+@use "/src/sass/pxtorem.scss" as r;
+
+.find {
+  padding-top: r.rem(60);
+  &__wrapper {
+    margin-top: r.rem(60);
+    padding-bottom: r.rem(60);
+    iframe {
+      width: 100%;
+      height: r.rem(206);
+    }
+  }
+}
+
+@media screen and (min-width: r.rem(768)) {
+  .find {
+    &__wrapper {
+      iframe {
+        width: 100%;
+        height: r.rem(400);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: r.rem(1200)) {
+  .find {
+    &__wrapper {
+      padding: 0 r.rem(239) r.rem(60) r.rem(239);
+      iframe {
+        height: r.rem(608);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: r.rem(1920)) {
+  .find {
+    padding-top: r.rem(100);
+    &__wrapper {
+      margin-top: r.rem(80);
+      padding: 0;
+      padding-bottom: r.rem(100);
+      iframe {
+        display: block;
+        margin: 0 auto;
+        width: r.rem(801);
+        height: r.rem(604);
+      }
+    }
+  }
+}

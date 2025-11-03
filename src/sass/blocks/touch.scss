@@ -122,6 +122,7 @@
 
 @media screen and (min-width: r.rem(1920)) {
   .touch {
+    padding-top: r.rem(100);
     &__img {
       height: r.rem(356);
     }

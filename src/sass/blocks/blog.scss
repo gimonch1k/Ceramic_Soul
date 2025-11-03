@@ -108,7 +108,8 @@
       border: none;
     }
     &__img-img {
-      transform: translateY(-1px);
+      width: r.rem(335);
+      transform: translate(-1px, -1px);
     }
   }
 }

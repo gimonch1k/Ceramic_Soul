@@ -1,0 +1,69 @@
+@use "/src/sass/base/variables.scss" as v;
+@use "/src/sass/pxtorem.scss" as r;
+
+.about {
+  padding-top: r.rem(50);
+  &__title {
+    margin-top: r.rem(60);
+  }
+  &__wrapper {
+    margin-top: r.rem(60);
+    display: flex;
+    flex-direction: column;
+    row-gap: r.rem(35);
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    row-gap: r.rem(20);
+  }
+  &__img {
+    width: 100%;
+    object-fit: cover;
+  }
+  &__img-img {
+    box-shadow: r.rem(5) r.rem(5) r.rem(10) 0 rgba(0, 0, 0, 0.25);
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: r.rem(768)) {
+  .about {
+    &__wrapper {
+      margin-top: r.rem(58);
+    }
+    &__img-img {
+      width: r.rem(600);
+    }
+  }
+}
+
+@media screen and (min-width: r.rem(1200)) {
+  .about {
+    &__wrapper {
+      flex-direction: row;
+    }
+    &__img {
+      width: r.rem(550);
+      margin-right: r.rem(20);
+    }
+    &__text {
+      width: r.rem(570);
+    }
+  }
+}
+
+@media screen and (min-width: r.rem(1200)) {
+  .about {
+    &__img {
+      width: r.rem(700);
+      margin-right: r.rem(20);
+    }
+    &__text {
+      width: r.rem(720);
+    }
+    &__img-img {
+      width: 100%;
+    }
+  }
+}
