@@ -81,6 +81,10 @@
   &__decor {
     display: none;
   }
+  .just-validate-error-field {
+    border: none;
+    outline: r.rem(1) solid v.$ui-error;
+  }
 }
 
 @media screen and (min-width: r.rem(768)) {
