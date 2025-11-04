@@ -119,3 +119,37 @@ try {
       }
     );
 } catch (e) {}
+
+try {
+  const validator__footer = new JustValidate(".footer__form");
+  validator__footer
+    .addField(
+      "#footer__email",
+      [
+        {
+          rule: "required",
+        },
+        {
+          rule: "email",
+        },
+      ],
+      {
+        errorsContainer: document
+          .querySelector("#footer__email")
+          .parentElement.parentElement.querySelector(".email-error-message"),
+      }
+    )
+    .addField(
+      "#footer__checkbox",
+      [
+        {
+          rule: "required",
+        },
+      ],
+      {
+        errorsContainer: document
+          .querySelector("#footer__checkbox")
+          .parentElement.parentElement.querySelector(".checkbox-error-message"),
+      }
+    );
+} catch (e) {}

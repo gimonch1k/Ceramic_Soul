@@ -2,6 +2,12 @@
 @use "/src/sass/base/variables.scss" as v;
 
 .footer {
+  .just-validate-error-field {
+    border-bottom: r.rem(1) solid v.$ui-error;
+    &::placeholder {
+      color: v.$ui-error;
+    }
+  }
   padding: r.rem(50) 0;
   background-color: v.$dark;
   &__title {
@@ -31,6 +37,9 @@
     color: v.$ui-active;
     &::placeholder {
       color: v.$ui-active;
+    }
+    &:focus {
+      outline: none;
     }
   }
   &__check-block {

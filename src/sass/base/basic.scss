@@ -48,6 +48,10 @@ body {
   position: relative;
 }
 
+.just-validate-error-label {
+  margin-top: r.rem(5);
+}
+
 @media screen and (min-width: r.rem(768)) {
   .container {
     max-width: r.rem(720);
