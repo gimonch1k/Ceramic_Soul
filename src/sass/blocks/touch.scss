@@ -121,6 +121,9 @@
     &__form {
       padding-left: r.rem(20);
     }
+    &__decor {
+      animation: slideOn 3s;
+    }
   }
 }
 
