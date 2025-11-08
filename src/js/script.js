@@ -1,6 +1,7 @@
 import Swiper from "swiper";
 import { Navigation, Pagination } from "swiper/modules";
 import JustValidate from "just-validate";
+import "animate.css";
 
 import "swiper/css";
 import "swiper/css/navigation";
