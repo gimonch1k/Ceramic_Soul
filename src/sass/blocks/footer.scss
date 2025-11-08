@@ -75,6 +75,7 @@
     flex-direction: column;
     list-style-type: none;
     row-gap: r.rem(20);
+    padding: 0;
     a {
       text-decoration: none;
       color: v.$light;
@@ -104,6 +105,10 @@
     font-size: r.rem(14);
     color: v.$light;
     text-align: center;
+  }
+  &__list {
+    list-style-type: none;
+    padding: 0;
   }
 }
 
