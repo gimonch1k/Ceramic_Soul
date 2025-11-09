@@ -107,8 +107,11 @@
     text-align: center;
   }
   &__list {
+    display: flex;
+    flex-direction: column;
     list-style-type: none;
     padding: 0;
+    row-gap: r.rem(20);
   }
 }
 
